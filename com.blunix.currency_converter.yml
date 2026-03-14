@@ -3,7 +3,7 @@
 ---
 app-id: com.blunix.currency_converter
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: currency_converter
 separate-locales: false
@@ -30,11 +30,11 @@ modules:
       - mkdir -p /app/bin
       - ln -s /app/currency_converter/currency_converter /app/bin/currency_converter
       # Install the icon
-      - install -Dm644 com.blunix.currency_converter.svg /app/share/icons/hicolor/scalable/apps/com.blunix.currency_converter.svg
+      - install -Dm644 com.blunix.currency_converter.svg -t /app/share/icons/hicolor/scalable/apps/
       # Install the desktop file
-      - install -Dm644 com.blunix.currency_converter.desktop /app/share/applications/com.blunix.currency_converter.desktop
+      - install -Dm644 com.blunix.currency_converter.desktop -t /app/share/applications/
       # Install the AppStream metadata file
-      - install -Dm644 com.blunix.currency_converter.metainfo.xml /app/share/metainfo/com.blunix.currency_converter.metainfo.xml
+      - install -Dm644 com.blunix.currency_converter.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: file
         url: https://git.blunix.com/miscellaneous/currency-converter/uploads/2583116834138e76d8c22e684303cb04/currency_converter-Linux-Portable.tar.gz
@@ -48,4 +48,3 @@ modules:
       - type: file
         url: https://git.blunix.com/miscellaneous/currency-converter/-/raw/5f65921ab135c59ef8e846ee68992f5399985642/assets/icons/com.blunix.currency_converter.svg
         sha256:  01532122b004450f387cdfe1d8b1e5bd7c2c68d545696e60a578e1802f71fd6b
-      
